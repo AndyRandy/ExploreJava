@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * Created by Deus on 15.11.2015.
  */
-public class CSLRead {
+public class CSVRead {
 
     public static void main(String[] args) {
 

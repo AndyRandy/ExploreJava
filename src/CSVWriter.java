@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 /**
  * Created by Deus on 15.11.2015.
  */
-public class CSVData {
+public class CSVWriter {
 
     public static void main(String[] args) {
 
