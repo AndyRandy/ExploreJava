@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ExploreJava:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ExploreJava_jar</output-path>
+    <root id="archive" name="ExploreJava.jar">
+      <element id="module-output" name="WriteFiles" />
+    </root>
+  </artifact>
+</component>
