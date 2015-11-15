@@ -31,7 +31,7 @@ public class CSVData {
 
                 //setup writer line with all input
                 String line = String.format(
-                        "%d;%f;%s;%s;%td.%tm.%tY:%tH:%tM:%tS%n",
+                        "%d;%f;%s;%s;%td.%tm.%tY %tH:%tM:%tS%n",
                         a,x,formel,str[i],time,time,time,time,time,time);
 
                 bufferedWriter.write(line);
