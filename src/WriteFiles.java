@@ -23,11 +23,18 @@ public class WriteFiles {
         try(BufferedWriter bufferedWriter = Files.newBufferedWriter(filePath)) {
 
             bufferedWriter.write("First Line");
+            bufferedWriter.newLine();
 
             //write next 10 lines in a loop
-            for(int i=0; i<10; i++) {
+            for(int i=2; i<10; i++) {
+
+                /*
                 bufferedWriter.newLine();
-                String line = "Line #" + (i+2);
+                String line = "Line #" + i;
+                bufferedWriter.write(line);
+                */
+                //or the other way
+                String line = String.format("Line #%d%n",i);
                 bufferedWriter.write(line);
             }
 
