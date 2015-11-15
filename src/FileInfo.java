@@ -9,7 +9,9 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 
 /**
- * Created by Deus on 15.11.2015.
+ * Created by Andy on 15.11.2015.
+ *
+ * You can get some file information by using java libs
  */
 public class FileInfo {
 

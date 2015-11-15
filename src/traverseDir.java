@@ -5,7 +5,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * Created by Deus on 15.11.2015.
+ * Created by Andy on 15.11.2015.
+ *
+ * traverse through a directory and print its content
  */
 public class traverseDir {
 
