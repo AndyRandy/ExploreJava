@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 
@@ -11,9 +12,17 @@ public class FileOperations {
 
     public static void main(String[] args) {
 
+        createMeta();
+
+        //get user home dir irrespective to os
         String homeDir = System.getProperty("user.home");
         Path dirPath  = Paths.get(homeDir);
-
+        /*
+        //get current working dir
+        String dir = System.getProperty("user.dir") + File.separator + "ExploreJava.jar";
+        Path path  = Paths.get(dir);
+        printList(path, "*");
+*/
         //init some samples
         Path dataOriginal  = Paths.get(homeDir, "data.csv");
         Path dataCopy      = Paths.get(homeDir, "dataCopy.csv");
@@ -67,6 +76,37 @@ public class FileOperations {
 
         } catch(IOException e) {
             System.out.println("IO error:\n" + e.getMessage());
+        }
+    }
+
+    public static void createMeta() {
+
+        String gameFolderName = "Dungeon";
+
+        //get documents dir
+        String homeApp = System.getProperty("user.home") + File.separator + "Documents" + File.separator +"My Games";
+        Path home = Paths.get(homeApp);
+        System.out.println("home: "+home.toString());
+
+        //define game folder path
+        Path gameDir = Paths.get(homeApp, gameFolderName);
+        //define game meta path
+        Path gameMeta= Paths.get(gameFolderName, "map0.txt");
+
+        //try to either create or update the game meta file
+        try {
+
+            if(!Files.exists(gameDir)) {
+                Files.createDirectory(gameDir);
+                Files.createFile(gameMeta);
+                System.out.println("subdir and file created.");
+            }
+            else {
+                System.out.println("subdir and file already exist.");
+            }
+
+        } catch (IOException ex) {
+            System.out.println("IO error:\n" + ex.getMessage());
         }
     }
 }
